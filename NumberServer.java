@@ -15,6 +15,8 @@ class Handler implements URLHandler {
         } else {
             System.out.println("Path: " + url.getPath());
             if (url.getPath().contains("/add")) {
+                // /add?count=5
+                //paramters[] [count, 5]
                 String[] parameters = url.getQuery().split("=");
                 if (parameters[0].equals("count")) {
                     num += Integer.parseInt(parameters[1]);
